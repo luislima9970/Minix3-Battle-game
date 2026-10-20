@@ -1,37 +1,32 @@
 # Minix3 Battle Game
 
-A battle game in C for MINIX 3, built on top of custom device drivers. Made for the **LCOM** (Computer Labs) course unit at FEUP, University of Porto.
+A game written in C for MINIX 3, built entirely on hand-written device drivers. Developed for the **LCOM** (Computer Labs) course unit at FEUP, University of Porto.
 
-## About
+## Overview
 
-All interaction with the hardware goes through drivers written from scratch for the course, with no external graphics or input libraries. The game reads input and draws to the screen using I/O ports and interrupts.
+The project talks to the hardware directly through I/O ports and interrupt handlers, with no external graphics or input libraries. The game runs on top of the drivers, which cover the main peripherals of a PC.
 
 ## Drivers
 
-- **Timer**: frame timing and game loop
-- **Keyboard**: keyboard input
-- **Mouse**: mouse input
-- **RTC**: real-time clock
-- **Graphics**: video card, drawing sprites and the game screen
+| Device | Role |
+|--------|------|
+| Timer (i8254) | Frame timing and game loop |
+| Keyboard (KBC) | Input via interrupts |
+| Mouse (PS/2) | Input via interrupts |
+| RTC | Real-time clock |
+| Graphics (VBE) | Video mode setup and sprite rendering |
 
-## Gameplay
+## Technical details
 
-TODO: 2 to 3 sentences on what the game is and how you win.
-
-**Controls**
-- TODO: keys / mouse actions
-
-## Screenshots
-
-TODO: add 1 or 2 screenshots in a `docs/` folder and link them here, e.g. `![Game screen](docs/screenshot.png)`.
+- Language: C
+- Platform: MINIX 3
+- Interrupt-driven I/O: each device uses an interrupt subscription, with handlers dispatched from a central loop
+- Direct hardware access through port I/O and memory-mapped video memory
 
 ## Build and run
 
-TODO: the exact commands you use, e.g. `make` and how to start it in MINIX.
+TODO: exact commands, e.g. `make`, then how you start it in MINIX.
 
 ## Authors
 
 - Luís Lima
-- TODO: teammates, if they agree to be listed
-
-Developed for LCOM, 2025/26.
