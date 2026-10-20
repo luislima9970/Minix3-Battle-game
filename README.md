@@ -25,18 +25,15 @@ The project talks to the hardware directly through I/O ports and interrupt handl
 
 ## Build and run
 
-Build the lab support libraries first, then compile and run the game from the project directory:
+Use the project build helper script to compile all dependencies and the final game:
 
 ```bash
-cd lab2 && make
-cd ../lab3 && make
-cd ../lab4 && make
-cd ../lab5 && make
-cd ../proj && make
+cd proj
+./build.sh
 ./proj
 ```
 
-This project depends on the shared libraries built in `lab2`, `lab3`, `lab4`, and `lab5` before the final `proj` binary can be compiled.
+This script builds the lab libraries (`lab2` to `lab5`) and then compiles the final `proj` game binary.
 
 ## Authors
 
