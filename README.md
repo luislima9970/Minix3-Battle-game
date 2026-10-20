@@ -4,7 +4,7 @@ A game written in C for MINIX 3, built entirely on hand-written device drivers. 
 
 ## Overview
 
-The project talks to the hardware directly through I/O ports and interrupt handlers, with no external graphics or input libraries. The game runs on top of the drivers, which cover the main peripherals of a PC.
+The project talks to the hardware directly through I/O ports and interrupt handlers, with no external graphics or input libraries. The game runs on top of the drivers, which cover the main peripherals[...]
 
 ## Drivers
 
@@ -25,7 +25,13 @@ The project talks to the hardware directly through I/O ports and interrupt handl
 
 ## Build and run
 
-TODO: exact commands, e.g. `make`, then how you start it in MINIX.
+From the repository root, build and start the game with:
+
+```bash
+cd proj
+make
+./proj
+```
 
 ## Authors
 
