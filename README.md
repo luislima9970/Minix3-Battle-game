@@ -25,13 +25,18 @@ The project talks to the hardware directly through I/O ports and interrupt handl
 
 ## Build and run
 
-From the repository root, build and start the game with:
+Build the lab support libraries first, then compile and run the game from the project directory:
 
 ```bash
-cd proj
-make
+cd lab2 && make
+cd ../lab3 && make
+cd ../lab4 && make
+cd ../lab5 && make
+cd ../proj && make
 ./proj
 ```
+
+This project depends on the shared libraries built in `lab2`, `lab3`, `lab4`, and `lab5` before the final `proj` binary can be compiled.
 
 ## Authors
 
